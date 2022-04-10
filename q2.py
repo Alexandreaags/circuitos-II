@@ -8,9 +8,12 @@ x = np.linalg.solve(A, B)
 Ia = x[0]
 Ic = x[1]
 Ib = complex(-2.5, -4.33) + Ia/4 + Ic/2
-print(f'A corrente de linha Ia é igual a {Ia:.2f} A')
-print(f'A corrente de linha Ib é igual a {Ib:.2f} A')
-print(f'A corrente de linha Ic é igual a {Ic:.2f} A')
+Ia1 = Ia
+Ib1 = Ib - Ia
+Ic1 = (-1)*Ib
+print(f'A corrente de linha Ia é igual a {Ia1:.2f} A')
+print(f'A corrente de linha Ib é igual a {Ib1:.2f} A')
+print(f'A corrente de linha Ic é igual a {Ic1:.2f} A')
 
 Pa = abs(Ia - Ic)**2 * 8
 Pb = abs(Ic)**2 * 4
